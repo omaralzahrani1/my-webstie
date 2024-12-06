@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <title>Movie Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function calculateScore() {
+            let score = 0;
+            const question1 = document.querySelector('input[name="question1"]:checked');
+            const question2 = document.querySelector('input[name="question2"]:checked');
+            const question3 = document.querySelector('input[name="question3"]:checked');
+            const question4 = document.querySelector('input[name="question4"]:checked');
+            const question5 = document.querySelector('input[name="question5"]:checked');
+            
+            if (question1 && question1.value === "Brad Pitt") score++;
+            if (question2 && question2.value === "1999") score++;
+            if (question3 && question3.value === "Christopher Nolan") score++;
+            if (question4 && question4.value === "Al Pacino") score++;
+            if (question5 && question5.value === "1994") score++;
+            
+
+            alert("Your Score: " + score + " / 5");
+        }   
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switcher">
+            <label for="theme-select">Choose Theme:</label>
+            <select id="theme-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to the Movie Quiz!</h1>
+        <p>Test your knowledge of movies, actors, and directors.</p>
+        
+        <h2>Quiz Instructions:</h2>
+        <p>Choose the correct answer for each question and submit your answers to see your score!</p>
+        
+        <h3>1. Who played the character of "Tyler Durden" in the movie Fight Club ?</h3>
+        <ul>
+            <li><input type="radio" name="question1" value="Leonardo DiCaprio"><label class="radio-label" for="question1">Leonardo DiCaprio</label></li>
+            <li><input type="radio" name="question1" value="Johnny Depp"><label class="radio-label" for="question1">Johnny Depp</label></li>
+            <li><input type="radio" name="question1" value="Brad Pitt"><label class="radio-label" for="question1">Brad Pitt</label></li>
+        </ul>
+
+        <h3>2. In which year was the movie "The Matrix" released ?</h3>
+        <ul>
+            <li><input type="radio" name="question2" value="1999"><label class="radio-label" for="question2">1999</label></li>
+            <li><input type="radio" name="question2" value="2000"><label class="radio-label" for="question2">2000</label></li>
+            <li><input type="radio" name="question2" value="2001"><label class="radio-label" for="question2">2001</label></li>
+        </ul>
+
+        <h3>3. Who directed the movie "The Dark Knight" ?</h3>
+        <ul>
+            <li><input type="radio" name="question3" value="Steven Spielberg"><label class="radio-label" for="question3">Steven Spielberg</label></li>
+            <li><input type="radio" name="question3" value="Martin Scorsese"><label class="radio-label" for="question3">Martin Scorsese</label></li>
+            <li><input type="radio" name="question3" value="Christopher Nolan"><label class="radio-label" for="question3">Christopher Nolan</label></li>
+        </ul>  
+
+        <h3>4. Who played the character of "Tony Montana" in the movie Scarface ?</h3>
+        <ul>
+            <li><input type="radio" name="question4" value="Marlon Brando"><label class="radio-label" for="question4">Marlon Brando</label></li>
+            <li><input type="radio" name="question4" value="Al Pacino"><label class="radio-label" for="question4">Al Pacino</label></li>
+            <li><input type="radio" name="question4" value="Robert De Niro"><label class="radio-label" for="question4">Robert De Niro</label></li>
+        </ul>
+
+        <h3>5. In which year was the movie "The Shawshank Redemption" released ?</h3>
+        <ul>
+            <li><input type="radio" name="question5" value="1992"><label class="radio-label" for="question5">1992</label></li>
+            <li><input type="radio" name="question5" value="1994"><label class="radio-label" for="question5">1994</label></li>
+            <li><input type="radio" name="question5" value="1997"><label class="radio-label" for="question5">1997</label></li>
+        </ul>  
+
+        <button onclick="calculateScore()">Submit Quiz</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Movie Quiz | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
